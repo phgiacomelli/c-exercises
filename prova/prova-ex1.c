@@ -21,7 +21,4 @@ int main() {
     }
     printf("\n\nProduto mais caro: %.2f",maior);
     printf("\n\nProduto mais barato(desc. 12%%): %.2f",menor*0.88);
-
-    
-
 }
