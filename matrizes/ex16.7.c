@@ -8,18 +8,49 @@
 #include <stdio.h>
 int main()
 {
-    int G[13][3] = {
-        {1, 0, 2},
-        {2, 1, 1},
+    int G[13] = {1, 3, 1, 2, 1, 1, 2, 3, 3, 3, 1, 2, 1};
+    int A[13][3] = {
+        {0, 1, 1},
+        {1, 1, 1},
+        {1, 0, 0},
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 0, 0},
+        {1, 1, 1},
         {1, 1, 0},
-        {0, 1, 2},
-        {2, 0, 1},
-        {1, 0, 2},
-        {2, 1, 1},
-        {1, 1, 0},
-        {0, 1, 2},
-        {2, 0, 1},
-        {1, 0, 2},
-        {2, 1, 1},
-        {1, 1, 0}};
+        {0, 1, 1},
+        {0, 0, 1},
+        {1, 0, 1},
+        {1, 1, 1},
+        {0, 1, 0}};
+
+    int acertos = 0, simples = 0, dupla = 0, tripla = 0;
+
+    for (int i = 0; i < 13; i++)
+    {
+        int count = 0;
+        for (int j = 0; j < 3; j++)
+            if (A[i][j]==1){
+                count++;
+                if (G[i] == j + 1) acertos++;
+            } 
+            
+        switch (count)
+        {
+        case 1:
+            simples++;
+            break;
+        case 2:
+            dupla++;
+            break;
+        case 3:
+            tripla++;
+            break;
+        }
+    }
+
+    printf("Acertos: %d\n\n", acertos);
+    printf("Simples: %d\n", simples);
+    printf("Duplas: %d\n", dupla);
+    printf("Triplas: %d", tripla);
 }
