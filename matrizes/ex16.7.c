@@ -8,6 +8,7 @@
 #include <stdio.h>
 int main()
 {
+    
     int G[13] = {1, 3, 1, 2, 1, 1, 2, 3, 3, 3, 1, 2, 1};
     int A[13][3] = {
         {0, 1, 1},
@@ -53,4 +54,6 @@ int main()
     printf("Simples: %d\n", simples);
     printf("Duplas: %d\n", dupla);
     printf("Triplas: %d", tripla);
+
+
 }

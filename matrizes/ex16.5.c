@@ -20,4 +20,5 @@ int main()
     printf("\nSoma Colunas: \n");
     for (int i = 0; i < 5; i++)
         printf("%d ", SC[i]);
+
 }
