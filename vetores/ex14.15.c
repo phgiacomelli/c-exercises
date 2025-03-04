@@ -8,8 +8,7 @@ int main() {
     for (int i = 0; i < 5; i++)
     {
         int a = u[i];
-        int b = u[i+c];
-        u[i]=b;
+        u[i]=u[i+c];
         u[i+c]=a;
         c-=2;
     }

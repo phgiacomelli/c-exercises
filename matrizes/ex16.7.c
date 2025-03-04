@@ -8,7 +8,6 @@
 #include <stdio.h>
 int main()
 {
-    
     int G[13] = {1, 3, 1, 2, 1, 1, 2, 3, 3, 3, 1, 2, 1};
     int A[13][3] = {
         {0, 1, 1},
@@ -36,24 +35,13 @@ int main()
                 if (G[i] == j + 1) acertos++;
             } 
             
-        switch (count)
-        {
-        case 1:
-            simples++;
-            break;
-        case 2:
-            dupla++;
-            break;
-        case 3:
-            tripla++;
-            break;
-        }
+        if (count==1) simples++;
+        else if (count==2) dupla++;
+        else tripla++;
     }
 
     printf("Acertos: %d\n\n", acertos);
     printf("Simples: %d\n", simples);
     printf("Duplas: %d\n", dupla);
     printf("Triplas: %d", tripla);
-
-
 }
