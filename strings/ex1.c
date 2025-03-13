@@ -15,7 +15,7 @@ int main(){
         char b = text[strlen(text)-(i+1)];
 
         text[i]=b;
-        text[strlen(text)-(i+1)] = a;
+        text[strlen(text)-(i+1)]=a;
     }
     
     printf("A string: %s",text);
