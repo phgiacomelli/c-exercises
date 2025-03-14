@@ -17,14 +17,13 @@ int main()
         {
             q[i] = num;
             i++;
-        }        
-    }
-    
-    for (int i = 0; i < 10; i++)
-        if (q[i]>maior){
-            maior = q[i];
+        }
+        
+        if (num>maior){
+            maior = num;
             indicieMaior = i;
         }
+    }     
             
     printf("Indicie maior: %d ", indicieMaior);   
 }
